@@ -62,7 +62,7 @@ export default function HomeClient({ initialListings, investmentListings = [], u
     <div className="flex flex-col">
       {/* 1. HERO SECTION */}
       <section className="relative pt-[120px] pb-20 md:pt-[160px] md:pb-40 overflow-hidden flex flex-col items-center justify-center min-h-[85vh]">
-        <Image src={getImageUrl('hero-bg.jpg')} alt="خرید و فروش آپارتمان در گرمدره" fill priority className="object-cover object-center z-0" sizes="100vw" quality={70} />
+        <Image src={getImageUrl('hero-bg.webp')} alt="خرید و فروش آپارتمان در گرمدره" fill priority className="object-cover object-center z-0" sizes="100vw" quality={75} />
         {/* Glow Effects */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-orange)]/15 rounded-full blur-[100px] pointer-events-none mix-blend-screen opacity-50"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[var(--color-blue)]/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen opacity-50"></div>
