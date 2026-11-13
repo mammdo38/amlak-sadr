@@ -46,7 +46,7 @@ export default function ContactForm({ inquiryType, listingId, buttonText, classN
   const [entrustData, setEntrustData] = useState({
     name: '',
     phone: '',
-    propertyType: 'villa',
+    propertyType: 'apartment',
     dealType: 'sell',
     region: '',
     size: '',
@@ -258,10 +258,10 @@ export default function ContactForm({ inquiryType, listingId, buttonText, classN
                   onChange={e => setEntrustData(f => ({...f, propertyType: e.target.value}))}
                   className="w-full px-4 py-3 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] transition-all text-sm"
                 >
-                  <option value="villa">ویلا</option>
-                  <option value="land">زمین</option>
-                  <option value="garden">باغ / باغچه</option>
-                  <option value="apartment">آپارتمان</option>
+                  <option value="apartment">آپارتمان مسکونی</option>
+                  <option value="penthouse">پنت‌هاوس</option>
+                  <option value="villa">ویلایی</option>
+                  <option value="land">زمین و کلنگی</option>
                   <option value="other">سایر</option>
                 </select>
               </div>
@@ -273,8 +273,8 @@ export default function ContactForm({ inquiryType, listingId, buttonText, classN
                   className="w-full px-4 py-3 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-xl focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)] transition-all text-sm"
                 >
                   <option value="sell">خرید و فروش</option>
-                  <option value="annual_rent">اجاره سالیانه</option>
-                  <option value="daily_rent">اجاره روزانه (ویلای روزانه)</option>
+                  <option value="annual_rent">رهن و اجاره</option>
+                  <option value="daily_rent">پیش‌فروش</option>
                 </select>
               </div>
             </div>

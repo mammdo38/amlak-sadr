@@ -56,7 +56,7 @@ export function getImageUrl(filename: string | null | undefined): string {
 }
 
 export function getAbsoluteImageUrl(filename: string | null | undefined): string {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/badiz-realestate';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/amlak-sadr';
   if (!filename) return `${baseUrl}/og-image.jpg`;
   if (filename.startsWith('http://') || filename.startsWith('https://')) return filename;
   const cleanFilename = filename.replace(/^\/?uploads\//, '').replace(/^\//, '');

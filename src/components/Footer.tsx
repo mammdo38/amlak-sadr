@@ -17,7 +17,7 @@ export default function Footer({ settings }: { settings?: any }) {
             </div>
           </Link>
           <p className="text-sm leading-relaxed mb-6">
-            {settings?.footer_desc || 'گروه مشاورین املاک صدر با سال‌ها تجربه در زمینه خرید، فروش، رهن و اجاره آپارتمان، ویلا و زمین در منطقه گرمدره البرز، همراه مطمئن شما در معاملات ملکی است.'}
+            {settings?.footer_desc || 'گروه مشاورین املاک صدر، مرجع تخصصی خرید، فروش، رهن و پیش‌فروش آپارتمان‌های نوساز، خوش‌نقشه و سنددار در تمامی محله‌های گرمدره البرز.'}
           </p>
         </div>
 
@@ -28,10 +28,10 @@ export default function Footer({ settings }: { settings?: any }) {
             دسترسی سریع
           </h3>
           <ul className="space-y-3 text-sm">
-            <li><Link href="/#listings" className="hover:text-white transition">آگهی‌های منتخب</Link></li>
-            <li><Link href="/magazine" className="hover:text-white transition">راهنمای خرید ملک</Link></li>
+            <li><Link href="/#listings" className="hover:text-white transition">آپارتمان‌های منتخب</Link></li>
+            <li><Link href="/magazine" className="hover:text-white transition">راهنمای خرید آپارتمان</Link></li>
             <li><Link href="/contact" className="hover:text-white transition">تماس با ما</Link></li>
-            <li><Link href="/#entrust" className="hover:text-[var(--color-orange)] transition">سپردن ملک</Link></li>
+            <li><Link href="/#entrust" className="hover:text-[var(--color-orange)] transition">سپردن آپارتمان</Link></li>
             <li><a href="/admin" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-blue)] transition font-bold">ورود به پنل ادمین</a></li>
           </ul>
         </div>

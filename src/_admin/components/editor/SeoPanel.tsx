@@ -118,7 +118,7 @@ export const SeoPanel: React.FC<SeoPanelProps> = ({
     let hasInternalLink = false;
     while ((m = linkRegex.exec(content)) !== null) {
       const href = m[1];
-      if (href.includes('badizvilla.ir') || href.startsWith('/') || href.startsWith('#')) {
+      if (href.includes('mammdo38.github.io/amlak-sadr') || href.startsWith('/') || href.startsWith('#')) {
         hasInternalLink = true;
         break;
       }
@@ -318,7 +318,7 @@ export const SeoPanel: React.FC<SeoPanelProps> = ({
       <div className="seo-section">
         <div className="seo-section-title">🔍 پیش‌نمایش گوگل (SERP)</div>
         <div className="serp-preview">
-          <div className="serp-url">badizvilla.ir › blog › {displaySlug || 'slug'}</div>
+          <div className="serp-url">mammdo38.github.io/amlak-sadr › blog › {displaySlug || 'slug'}</div>
           <div className="serp-title">
             {(metaTitle || title || 'عنوان مقاله').slice(0, 60)}
             {(metaTitle || title).length > 60 && (
@@ -438,7 +438,7 @@ export const SeoPanel: React.FC<SeoPanelProps> = ({
           </div>
         ) : (
           <div style={{ fontSize: '0.8rem', color: '#48484A', direction: 'ltr', textAlign: 'left' }}>
-            badizvilla.ir/blog/{displaySlug || 'slug'}
+            mammdo38.github.io/amlak-sadr/blog/{displaySlug || 'slug'}
           </div>
         )}
         <div style={{ marginTop: '0.4rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>

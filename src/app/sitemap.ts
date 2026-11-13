@@ -4,7 +4,7 @@ import { listings as mockListings, regions, blogPosts as mockPosts } from '@/dat
 export const dynamic = 'force-static';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://badizvilla.ir';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/amlak-sadr';
 
   // Fetch real dynamic data with fallbacks
   let dynamicListings = mockListings;

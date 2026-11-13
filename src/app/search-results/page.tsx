@@ -3,7 +3,7 @@ import SearchResultsClient from './SearchResultsClient';
 import { getDynamicRegions } from '@/utils';
 import type { Metadata } from 'next';
 
-const url = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://badizvilla.ir'}/search-results`;
+const url = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/amlak-sadr'}/search-results`;
 
 export const dynamic = 'force-static';
 

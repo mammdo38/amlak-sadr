@@ -42,7 +42,7 @@ export default function BlogPostClient({ post, initialBlogPosts, initialRegions,
   }, []);
 
   const handleShare = () => {
-    const origin = typeof window !== 'undefined' ? window.location.origin : 'https://badizvilla.ir';
+    const origin = typeof window !== 'undefined' ? window.location.origin : 'https://mammdo38.github.io/amlak-sadr';
     const shareUrl = post.id ? `${origin}/magazine/${post.id}` : decodeURI(window.location.href);
     if (typeof window !== 'undefined' && navigator.share) {
       navigator.share({
@@ -244,11 +244,11 @@ export default function BlogPostClient({ post, initialBlogPosts, initialRegions,
               </div>
             ) : (
               <div className="bg-white rounded-3xl p-6 shadow-sm border border-[var(--color-border)]">
-                <h3 className="font-bold text-[var(--color-dark)] text-lg mb-4">مناطق و ویلاهای پیشنهادی</h3>
+                <h3 className="font-bold text-[var(--color-dark)] text-lg mb-4">مناطق و آپارتمان‌های پیشنهادی</h3>
                 <div className="flex flex-col gap-3">
                   {Object.values(initialRegions).map(r => (
                     <Link key={r.slug} href={`/${r.slug}`} className="bg-[var(--color-bg)] hover:bg-white p-3 rounded-xl flex items-center justify-between group transition-colors">
-                      <span className="font-bold text-[var(--color-dark)] flex items-center gap-2 text-sm"><span className="opacity-50">{r.emoji}</span> ویلا در {r.name}</span>
+                      <span className="font-bold text-[var(--color-dark)] flex items-center gap-2 text-sm"><span className="opacity-50">{r.emoji}</span> آپارتمان در {r.name}</span>
                     </Link>
                   ))}
                 </div>

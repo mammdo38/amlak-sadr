@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
   const title = region.page_title || `آگهی‌های املاک در ${region.name} | املاک صدر`;
-  const description = `${region.description.substring(0, 160)} - خرید و فروش ویلا و زمین در ${region.name}`;
-  const url = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://badizvilla.ir'}/${regionSlug}`;
+  const description = `${region.description.substring(0, 160)} - خرید و فروش آپارتمان نوساز و سنددار در ${region.name}`;
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/amlak-sadr'}/${regionSlug}`;
 
   return {
     title,
@@ -80,7 +80,7 @@ export default async function RegionPage({ params }: Props) {
         "@type": "ListItem",
         "position": 1,
         "name": "خانه",
-        "item": "https://badizvilla.ir/"
+        "item": "https://mammdo38.github.io/amlak-sadr/"
       },
       {
         "@type": "ListItem",

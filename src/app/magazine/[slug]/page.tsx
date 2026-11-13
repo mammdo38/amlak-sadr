@@ -66,11 +66,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const defaultTitle = `${post.title} | مجله تخصصی املاک صدر`;
   const title = (post.metaTitle || defaultTitle).substring(0, 70);
   const description = (post.metaDescription || post.excerpt || '').substring(0, 160);
-  const url = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://badizvilla.ir'}/magazine/${encodeURIComponent(post.slug || slug)}`;
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/amlak-sadr'}/magazine/${encodeURIComponent(post.slug || slug)}`;
   
   const ogImage = post.coverImage 
-    ? `https://badizvilla.ir/api/og-image/${post.coverImage}`
-    : `https://badizvilla.ir/og-image.jpg`;
+    ? `https://mammdo38.github.io/amlak-sadr/api/og-image/${post.coverImage}`
+    : `https://mammdo38.github.io/amlak-sadr/og-image.jpg`;
 
   return {
     title,
@@ -150,7 +150,7 @@ export default async function BlogPostPage({ params }: Props) {
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.excerpt,
-    "image": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://badizvilla.ir'}/og-default.jpg`,
+    "image": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/amlak-sadr'}/og-default.jpg`,
     "datePublished": post.date,
     "dateModified": post.date,
     "author": {
@@ -162,7 +162,7 @@ export default async function BlogPostPage({ params }: Props) {
       "name": "املاک صدر",
       "logo": {
         "@type": "ImageObject",
-        "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://badizvilla.ir'}/logo.png`
+        "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/amlak-sadr'}/logo.png`
       }
     }
   };
@@ -175,7 +175,7 @@ export default async function BlogPostPage({ params }: Props) {
         "@type": "ListItem",
         "position": 1,
         "name": "مجله املاک صدر",
-        "item": "https://badizvilla.ir/magazine"
+        "item": "https://mammdo38.github.io/amlak-sadr/magazine"
       },
       {
         "@type": "ListItem",

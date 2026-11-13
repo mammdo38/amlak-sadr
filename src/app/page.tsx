@@ -178,30 +178,32 @@ export default async function HomePage() {
 
     const siteName = settings?.site_name || "املاک صدر";
     
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mammdo38.github.io/amlak-sadr";
+
     const realEstateSchema = {
       "@context": "https://schema.org",
       "@type": "RealEstateAgent",
       "name": `دپارتمان تخصصی ${siteName}`,
-      "image": "https://badizvilla.ir/og-image.jpg",
-      "url": "https://badizvilla.ir",
-      "telephone": settings?.site_phone ? `+98${settings.site_phone.replace(/^0/, '').replace(/\D/g, '')}` : "+989120000000",
+      "image": `${siteUrl}/og-image.jpg`,
+      "url": siteUrl,
+      "telephone": settings?.site_phone ? `+98${settings.site_phone.replace(/^0/, '').replace(/\D/g, '')}` : "+989123943717",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "گرمدره",
         "addressRegion": "البرز",
         "addressCountry": "IR"
       },
-      "description": "خرید، فروش، رهن و اجاره آپارتمان، باغ‌ویلا و زمین در مناطق مختلف گرمدره - دپارتمان تخصصی املاک صدر"
+      "description": "مرجع تخصصی خرید، فروش، رهن و پیش‌فروش آپارتمان‌های نوساز و سنددار در گرمدره - دپارتمان تخصصی املاک صدر"
     };
 
     const websiteSchema = {
       "@context": "https://schema.org/",
       "@type": "WebSite",
       "name": `${siteName} گرمدره`,
-      "url": "https://badizvilla.ir",
+      "url": siteUrl,
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://badizvilla.ir/search-results?search={search_term_string}",
+        "target": `${siteUrl}/search-results?search={search_term_string}`,
         "query-input": "required name=search_term_string"
       }
     };

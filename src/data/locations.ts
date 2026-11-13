@@ -32,7 +32,7 @@ export const regionsData: MapRegion[] = [
     name: 'گرمدره جنوبی',
     parentSlug: 'kordan-jonoubi',
     coords: [35.7380, 51.0880],
-    description: 'بافت آرام و باغ‌ویلایی با دسترسی سریع به اتوبان تهران-کرج و ایستگاه مترو گرمدره.',
+    description: 'بافت آرام و مسکونی با دسترسی سریع به اتوبان تهران-کرج و ایستگاه مترو گرمدره.',
     type: 'jonoubi',
     articleSlug: 'guide-garmdarreh-jonoubi'
   },

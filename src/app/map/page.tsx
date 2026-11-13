@@ -6,9 +6,9 @@ import MapWrapper from '@/components/MapWrapper';
 
 export const metadata: Metadata = {
   title: 'نقشه تعاملی مناطق گرمدره | راهنمای کامل محله‌های گرمدره البرز',
-  description: 'نقشه کامل و تعاملی محله‌های مختلف گرمدره شامل گرمدره شمالی، جنوبی، بلوار امیرکبیر، کوهک و شهرک شاهد همراه با آگهی‌های آپارتمان و باغ‌ویلا.',
+  description: 'نقشه کامل و تعاملی محله‌های مختلف گرمدره شامل گرمدره شمالی، جنوبی، بلوار امیرکبیر، کوهک و شهرک شاهد همراه با آگهی‌های آپارتمان نوساز و سنددار.',
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://badizvilla.ir'}/map`,
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/amlak-sadr'}/map`,
   }
 };
 
@@ -97,7 +97,7 @@ export default function MapPage() {
                   <li className="flex items-start gap-2">
                     <span className="text-orange-500 mt-1">📍</span>
                     <div>
-                      <strong>باغ‌ویلاها:</strong> فرصتی استثنایی برای داشتن فضای سبز و آرامش در کمترین فاصله تا غرب تهران.
+                      <strong>پنت‌هاوس‌ها و مجتمع‌های لوکس:</strong> فرصتی استثنایی برای سکونت در فضایی مدرن و آرام در کمترین فاصله تا غرب تهران.
                     </div>
                   </li>
                 </ul>

@@ -85,11 +85,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title = (listing.metaTitle || defaultTitle).substring(0, 70);
   const description = (listing.metaDescription || listing.shortDesc || defaultDesc).substring(0, 160);
-  const url = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://badizvilla.ir'}/listing/${encodeURIComponent(id)}`;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/amlak-sadr';
+  const url = `${siteUrl}/listing/${encodeURIComponent(id)}`;
 
   const ogImage = listing.primaryImage 
-    ? `https://badizvilla.ir/api/og-image/${listing.primaryImage}`
-    : `https://badizvilla.ir/og-image.jpg`;
+    ? getAbsoluteImageUrl(listing.primaryImage)
+    : `${siteUrl}/og-image.jpg`;
 
   return {
     title,
@@ -268,7 +269,7 @@ export default async function ListingPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "RealEstateListing",
     "name": listing.title,
-    "description": `ویلا و ملک استثنایی در ${region?.name || ''} مناسب برای ${translateDealType(listing.dealType)}`,
+    "description": `آپارتمان و واحد مسکونی نوساز در ${region?.name || ''} مناسب برای ${translateDealType(listing.dealType)}`,
     "datePosted": "2024-05-01",
     "image": listing.primaryImage ? [getImageUrl(listing.primaryImage)] : [],
     "offers": {
@@ -305,13 +306,13 @@ export default async function ListingPage({ params }: Props) {
         "@type": "ListItem",
         "position": 1,
         "name": "آگهی‌ها",
-        "item": "https://badizvilla.ir/search-results"
+        "item": "https://mammdo38.github.io/amlak-sadr/search-results"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": region?.name || 'مناطق',
-        "item": `https://badizvilla.ir/${region?.slug || ''}`
+        "item": `https://mammdo38.github.io/amlak-sadr/${region?.slug || ''}`
       },
       {
         "@type": "ListItem",
@@ -666,7 +667,7 @@ export default async function ListingPage({ params }: Props) {
                 <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
                   <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-orange)] inline-block animate-pulse" />
-                    ویلاهای پیشنهادی هم‌رده
+                    آپارتمان‌های پیشنهادی هم‌رده
                   </h3>
                   {region && (
                     <Link href={`/${region.slug}`} className="text-xs text-[var(--color-orange)] font-bold hover:underline">

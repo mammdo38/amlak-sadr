@@ -4,17 +4,17 @@ import { blogPosts } from '@/data';
 import MagazineClient from './MagazineClient';
 import { BlogPost } from '@/types';
 
-const url = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://badizvilla.ir'}/magazine`;
+const url = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/amlak-sadr'}/magazine`;
 
 export const metadata: Metadata = {
-  title: "مجله تخصصی ملکی صدر | راهنمای جامع خرید و سرمایه‌گذاری ملک در گرمدره",
-  description: "مقالات، راهنمای خرید آپارتمان، باغ‌ویلا و زمین، استعلامات قانونی و بررسی قیمت‌های روز املاک در گرمدره",
+  title: "مجله تخصصی مسکن صدر | راهنمای خرید و سرمایه‌گذاری آپارتمان در گرمدره",
+  description: "مقالات، تحلیل بازار مسکن، راهنمای خرید آپارتمان نوساز، استعلامات قانونی سند و بررسی قیمت هر متر در گرمدره البرز",
   alternates: {
     canonical: url,
   },
   openGraph: {
-    title: "مجله تخصصی ملکی صدر | راهنمای جامع خرید و سرمایه‌گذاری ملک در گرمدره",
-    description: "مقالات، راهنمای خرید آپارتمان، باغ‌ویلا و زمین، استعلامات قانونی و بررسی قیمت‌های روز املاک در گرمدره",
+    title: "مجله تخصصی مسکن صدر | راهنمای خرید و سرمایه‌گذاری آپارتمان در گرمدره",
+    description: "مقالات، تحلیل بازار مسکن، راهنمای خرید آپارتمان نوساز، استعلامات قانونی سند و بررسی قیمت هر متر در گرمدره البرز",
     url,
     type: "website",
     locale: "fa_IR",
@@ -66,13 +66,13 @@ export default async function BlogPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "مجله تخصصی ملکی صدر",
-    "description": "مقالات، راهنمای خرید ویلا و زمین، استعلامات قانونی",
-    "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://badizvilla.ir'}/magazine`,
+    "name": "مجله تخصصی مسکن صدر",
+    "description": "مقالات، راهنمای خرید و سرمایه‌گذاری آپارتمان در گرمدره، استعلامات قانونی و تحلیل بازار مسکن",
+    "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/amlak-sadr'}/magazine`,
     "hasPart": fetchedPosts.map((post) => ({
       "@type": "Article",
       "headline": post.title,
-      "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://badizvilla.ir'}/magazine/${post.slug}`
+      "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/amlak-sadr'}/magazine/${post.slug}`
     }))
   };
 

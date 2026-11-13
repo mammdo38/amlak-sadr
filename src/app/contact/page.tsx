@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import ContactClient from './ContactClient';
 import { defaultSettings } from '@/data';
 
-const url = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://badizvilla.ir'}/contact`;
+const url = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mammdo38.github.io/amlak-sadr'}/contact`;
 
 export const metadata: Metadata = {
   title: "تماس با ما | دپارتمان املاک صدر گرمدره",

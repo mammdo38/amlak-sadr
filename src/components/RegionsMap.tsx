@@ -24,7 +24,7 @@ export default function RegionsMap() {
   useEffect(() => {
     initLeaflet();
     setMounted(true);
-    fetch('https://badizvilla.ir/api/map-locations')
+    fetch('https://mammdo38.github.io/amlak-sadr/api/map-locations')
       .then(res => res.json())
       .then(data => {
         if (data.success) {

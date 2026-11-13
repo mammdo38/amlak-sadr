@@ -37,7 +37,7 @@ export default function Navbar({ settings }: { settings?: any }) {
   }, [pathname, hash]);
 
   const navLinks = [
-    { label: 'آگهی‌ها', href: '/#listings' },
+    { label: 'آپارتمان‌ها', href: '/#listings' },
     { label: 'مناطق گرمدره', href: '/map' },
     { label: 'سرمایه‌گذاری', href: '/#investment' },
     { label: 'راهنمای خرید', href: '/magazine' }, // old /blog -> new /magazine
@@ -95,7 +95,7 @@ export default function Navbar({ settings }: { settings?: any }) {
             </a>
             <Link href="/contact?tab=entrust" className="bg-[var(--color-orange)] hover:bg-[var(--color-orange-light)] text-white px-5 py-2 rounded-full text-sm font-semibold transition-colors flex items-center gap-2 shadow-sm">
               <Home size={18} />
-              ثبت ملک
+              سپردن آپارتمان
             </Link>
           </div>
 
@@ -103,7 +103,7 @@ export default function Navbar({ settings }: { settings?: any }) {
           <div className="flex md:hidden items-center gap-3 shrink-0">
             <Link href="/contact?tab=entrust" className="bg-[var(--color-orange)] hover:bg-[var(--color-orange-light)] text-white px-3 py-1.5 rounded-full text-xs font-semibold transition-colors flex items-center gap-1.5 shadow-sm">
               <Home size={14} />
-              ثبت ملک
+              سپردن ملک
             </Link>
             <button 
               className="text-white flex items-center justify-center p-1"

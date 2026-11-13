@@ -375,7 +375,7 @@ export default function SearchResultsClient({ initialRegions }: Props) {
                 <div>
                   <p className="font-bold text-sm text-[var(--color-dark)] mb-3">نوع ملک</p>
                   <div className="grid grid-cols-2 gap-2">
-                    {(localDealType === 'daily_rent' ? ['all', 'villa', 'garden', 'apartment'] : ['all', 'villa', 'garden', 'land', 'apartment']).map(val => (
+                    {['all', 'apartment', 'villa', 'land'].map(val => (
                       <button 
                         key={val}
                         onClick={() => setLocalPropType(val)}

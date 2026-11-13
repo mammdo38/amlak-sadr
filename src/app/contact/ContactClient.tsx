@@ -97,7 +97,7 @@ export default function ContactClient({ settings }: { settings: any }) {
           {/* Right/Form */}
           <div className="w-full lg:w-3/5 md:p-12 p-8">
             <h2 className="text-2xl font-bold text-[var(--color-dark)] mb-2">ارسال پیام و ثبت درخواست</h2>
-            <p className="text-[var(--color-gray)] mb-8 text-sm">از طریق فرم زیر می‌توانید درخواست مشاوره خود را ثبت کنید یا مشخصات ملک خود را برای فروش/اجاره بسپارید.</p>
+            <p className="text-[var(--color-gray)] mb-8 text-sm">از طریق فرم زیر می‌توانید درخواست مشاوره خود را ثبت کنید یا مشخصات آپارتمان خود را برای فروش یا رهن و اجاره به املاک صدر بسپارید.</p>
             
             <ContactForm inquiryType="general" defaultTab={defaultTab} settings={settings} className="max-w-md" />
           </div>

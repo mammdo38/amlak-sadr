@@ -56,8 +56,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSettings();
   
   const siteName = settings.site_name || "املاک صدر";
-  const tagline = settings.site_tagline || "دپارتمان تخصصی املاک صدر گرمدره";
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://badizvilla.ir";
+  const tagline = settings.site_tagline || "مرجع تخصصی خرید و فروش آپارتمان در گرمدره";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mammdo38.github.io/amlak-sadr";
   
   return {
     metadataBase: new URL(baseUrl),
@@ -65,7 +65,7 @@ export async function generateMetadata(): Promise<Metadata> {
       template: `%s | ${siteName}`,
       default: `${siteName} | ${tagline}`,
     },
-    description: "خرید، فروش، رهن و اجاره آپارتمان، باغ‌ویلا و زمین در گرمدره شمالی، جنوبی و کوهک - دپارتمان تخصصی املاک صدر با بهترین کارشناسان ملکی.",
+    description: "مرجع تخصصی خرید، فروش، رهن و پیش‌فروش آپارتمان‌های نوساز، خوش‌نقشه و سنددار در گرمدره شمالی، بلوار امیرکبیر و کوهک - املاک صدر.",
     alternates: {
       canonical: baseUrl,
     },
@@ -78,7 +78,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     openGraph: {
       title: `${siteName} | ${tagline}`,
-      description: "خرید، فروش، رهن و اجاره آپارتمان، باغ‌ویلا و زمین در گرمدره شمالی، جنوبی و کوهک - دپارتمان تخصصی املاک صدر با بهترین کارشناسان ملکی.",
+      description: "مرجع تخصصی خرید، فروش، رهن و پیش‌فروش آپارتمان‌های نوساز، خوش‌نقشه و سنددار در گرمدره شمالی، بلوار امیرکبیر و کوهک - املاک صدر.",
       url: baseUrl,
       siteName: siteName,
       images: [
@@ -95,7 +95,7 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: `${siteName} | ${tagline}`,
-      description: "خرید و فروش ملک و آپارتمان در گرمدره - دپارتمان تخصصی املاک صدر",
+      description: "خرید و فروش تخصصی آپارتمان در گرمدره - دپارتمان تخصصی املاک صدر",
       images: [`${baseUrl}/og-image.jpg`],
     },
     robots: {
@@ -134,8 +134,8 @@ export default async function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "املاک صدر گرمدره",
-              "url": "https://badizvilla.ir",
-              "logo": "https://badizvilla.ir/logo.png"
+              "url": "https://mammdo38.github.io/amlak-sadr",
+              "logo": "https://mammdo38.github.io/amlak-sadr/logo.png"
             })
           }}
         />

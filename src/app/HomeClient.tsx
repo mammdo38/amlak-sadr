@@ -62,7 +62,7 @@ export default function HomeClient({ initialListings, investmentListings = [], u
     <div className="flex flex-col">
       {/* 1. HERO SECTION */}
       <section className="relative pt-[120px] pb-20 md:pt-[160px] md:pb-40 overflow-hidden flex flex-col items-center justify-center min-h-[85vh]">
-        <Image src={getImageUrl('hero-bg.jpg')} alt="خرید و فروش ملک در گرمدره" fill priority className="object-cover object-center z-0" sizes="100vw" quality={70} />
+        <Image src={getImageUrl('hero-bg.jpg')} alt="خرید و فروش آپارتمان در گرمدره" fill priority className="object-cover object-center z-0" sizes="100vw" quality={70} />
         {/* Glow Effects */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-orange)]/15 rounded-full blur-[100px] pointer-events-none mix-blend-screen opacity-50"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[var(--color-blue)]/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen opacity-50"></div>
@@ -91,11 +91,11 @@ export default function HomeClient({ initialListings, investmentListings = [], u
           </div>
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white leading-[1.2] mb-4 md:mb-6 drop-shadow-2xl animate-[fade-in-up_1s_ease-out_0.2s_both]">
-            خرید و فروش ویلای رویایی در <br className="hidden md:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-orange-light)] to-[var(--color-orange)]">شهر زیبای گرمدره</span>
+            خرید و فروش تخصصی <br className="hidden md:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-orange-light)] to-[var(--color-orange)]">آپارتمان در گرمدره</span>
           </h1>
           <p className="text-[var(--color-gray-light)] text-lg md:text-xl font-medium mb-12 max-w-2xl leading-relaxed animate-[fade-in-up_1s_ease-out_0.2s_both]">
-            گروه مشاورین املاک صدر، مرجع تخصصی خرید، فروش، رهن و اجاره آپارتمان، باغ‌ویلا و زمین در مناطق مختلف گرمدره.
+            گروه مشاورین املاک صدر، مرجع تخصصی خرید، فروش و پیش‌فروش واحدهای نوساز، خوش‌نقشه و سند تک‌برگ در گرمدره.
           </p>
 
           {/* Search Box */}
@@ -113,22 +113,20 @@ export default function HomeClient({ initialListings, investmentListings = [], u
                     value={selectedDealType}
                     onChange={(e) => setSelectedDealType(e.target.value)}
                   >
-                    <option value="all">همه موارد</option>
+                    <option value="all">همه معاملات</option>
                     <option value="sell">خرید و فروش</option>
-                    <option value="annual_rent">اجاره سالیانه</option>
-                    <option value="daily_rent">اجاره روزانه</option>
-                    <option value="commercial_rent">اجاره تجاری</option>
+                    <option value="annual_rent">رهن و اجاره</option>
+                    <option value="daily_rent">پیش‌فروش</option>
                   </select>
                 </div>
 
                 <div className="w-1/2 md:border-l border-white/20 px-2 md:px-4 py-1.5 md:py-2">
                   <label htmlFor="type" className="block text-[10px] md:text-xs font-bold text-[var(--color-orange-light)] mb-0.5 md:mb-1 uppercase tracking-wider">نوع ملک</label>
-                  <select id="type" name="type" className="w-full bg-transparent text-white text-xs md:text-sm font-semibold focus:outline-none cursor-pointer [&>option]:bg-[#1a1a1a] [&>option]:text-white" aria-label="نوع ملک">
+                  <select id="type" name="type" defaultValue="apartment" className="w-full bg-transparent text-white text-xs md:text-sm font-semibold focus:outline-none cursor-pointer [&>option]:bg-[#1a1a1a] [&>option]:text-white" aria-label="نوع ملک">
+                    <option value="apartment">آپارتمان مسکونی</option>
                     <option value="all">همه انواع ملک</option>
-                    <option value="villa">ویلا</option>
-                    <option value="garden">باغ</option>
-                    {selectedDealType !== 'daily_rent' && <option value="land">زمین</option>}
-                    <option value="apartment">آپارتمان</option>
+                    <option value="villa">پنت‌هاوس و ویلایی</option>
+                    <option value="land">زمین و کلنگی</option>
                   </select>
                 </div>
               </div>
@@ -171,16 +169,16 @@ export default function HomeClient({ initialListings, investmentListings = [], u
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal">
             <div>
-              <p className="text-[var(--color-orange)] font-bold text-xs uppercase tracking-wider mb-2">جدیدترین فرصت‌ها</p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[var(--color-dark)]">ملک‌های منتخب املاک صدر</h2>
+              <p className="text-[var(--color-orange)] font-bold text-xs uppercase tracking-wider mb-2">جدیدترین واحدهای مسکونی</p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[var(--color-dark)]">آپارتمان‌های منتخب املاک صدر</h2>
             </div>
             {/* Filter Tabs */}
             <div className="flex overflow-x-auto pb-2 -mx-4 px-4 md:px-0 md:mx-0 md:pb-0 hide-scrollbar gap-2">
               {[
                 {id: 'all', label: 'همه'},
-                {id: 'sell', label: 'خرید و فروش'},
-                {id: 'annual_rent', label: 'اجاره سالیانه'},
-                {id: 'daily_rent', label: 'اجاره روزانه'}
+                {id: 'sell', label: 'فروش آپارتمان'},
+                {id: 'annual_rent', label: 'رهن و اجاره'},
+                {id: 'daily_rent', label: 'پیش‌فروش'}
               ].map(tab => (
                 <button
                   key={tab.id}
@@ -204,12 +202,12 @@ export default function HomeClient({ initialListings, investmentListings = [], u
               <div className="w-16 h-16 bg-orange-50 text-[var(--color-orange)] rounded-2xl flex items-center justify-center mb-4">
                 <Home size={32} />
               </div>
-              <h3 className="text-xl font-bold text-[var(--color-dark)] mb-2">به‌زودی آگهی‌های جدید ثبت می‌شوند</h3>
+              <h3 className="text-xl font-bold text-[var(--color-dark)] mb-2">به‌زودی واحدهای جدید ثبت می‌شوند</h3>
               <p className="text-sm text-[var(--color-gray-mid)] max-w-md mb-6 leading-relaxed">
-                در حال حاضر آگهی با این مشخصات در دیتابیس ثبت نشده است. اگر قصد فروش یا اجاره ملک خود در گرمدره را دارید، همین حالا ملک خود را ثبت کنید.
+                در حال حاضر واحدی با این فیلتر ثبت نشده است. اگر قصد فروش یا رهن آپارتمان خود در گرمدره را دارید، همین حالا مشخصات آن را ثبت کنید.
               </p>
               <a href="#entrust" className="inline-flex items-center gap-2 bg-[var(--color-orange)] text-white px-6 py-3 rounded-full font-bold shadow-md hover:bg-[var(--color-orange-light)] transition">
-                سپردن ملک در گرمدره
+                سپردن آپارتمان در گرمدره
               </a>
             </div>
           ) : (
@@ -243,10 +241,10 @@ export default function HomeClient({ initialListings, investmentListings = [], u
                   <Flame size={16} className="animate-pulse" /> شکار بازار
                 </div>
                 <h2 className="text-3xl md:text-5xl font-black text-[var(--color-dark)] mb-4 leading-tight">
-                  فروش <span className="text-transparent bg-clip-text bg-gradient-to-l from-red-500 to-orange-500">فوری</span> و زیر قیمت
+                  فروش <span className="text-transparent bg-clip-text bg-gradient-to-l from-red-500 to-orange-500">فوری</span> آپارتمان زیر قیمت
                 </h2>
                 <p className="text-[var(--color-gray)] text-lg">
-                  املاکی که به دلیل نیاز مالی مالک یا شرایط ویژه، بسیار پایین‌تر از قیمت واقعی منطقه برای مدت محدود عرضه شده‌اند.
+                  واحدهای مسکونی که به دلیل شرایط ویژه مالک، پایین‌تر از قیمت کارشناسی منطقه برای مدت محدود جهت فروش عرضه شده‌اند.
                 </p>
               </div>
               <Link href="/search-results?urgent=true" className="shrink-0 flex items-center gap-2 text-red-600 font-bold hover:gap-3 transition-all">
@@ -277,10 +275,10 @@ export default function HomeClient({ initialListings, investmentListings = [], u
                   <TrendingUp size={16} /> فرصت طلایی
                 </div>
                 <h2 className="text-3xl md:text-5xl font-black mb-4 leading-tight">
-                  بهترین گزینه‌های <span className="text-transparent bg-clip-text bg-gradient-to-l from-green-400 to-emerald-200">سرمایه‌گذاری</span>
+                  بهترین فرصت‌های <span className="text-transparent bg-clip-text bg-gradient-to-l from-green-400 to-emerald-200">سرمایه‌گذاری آپارتمان</span>
                 </h2>
                 <p className="text-gray-400 text-lg">
-                  املاکی که در مناطق رو به رشد گرمدره واقع شده‌اند و پتانسیل بالایی برای افزایش قیمت در کوتاه‌مدت و میان‌مدت دارند.
+                  واحدهای نوساز، پیش‌فروش‌های برند و آپارتمان‌های رو به رشد در گرمدره با بالاترین ارزش افزوده و نقدشوندگی سریع.
                 </p>
               </div>
               <Link href="/search-results?investment=true" className="shrink-0 flex items-center gap-2 text-green-400 font-bold hover:gap-3 transition-all">
@@ -343,14 +341,14 @@ export default function HomeClient({ initialListings, investmentListings = [], u
         <div className="max-w-7xl mx-auto px-4 relative z-10 flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2 text-center lg:text-right reveal">
             <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight mb-6">
-              ملک خود را به <span className="text-[var(--color-orange)] relative inline-block">املاک صدر<span className="absolute bottom-1 left-0 w-full h-2 bg-[var(--color-orange)]/30 rounded-full -z-10"></span></span> بسپارید
+              آپارتمان خود را به <span className="text-[var(--color-orange)] relative inline-block">املاک صدر<span className="absolute bottom-1 left-0 w-full h-2 bg-[var(--color-orange)]/30 rounded-full -z-10"></span></span> بسپارید
             </h2>
             <p className="text-[var(--color-gray-light)] text-lg mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              با تکیه بر سال‌ها تجربه و پایگاه داده وسیع مشتریان، ملک شما را در سریع‌ترین زمان و با بهترین قیمت ارزش‌گذاری و معامله می‌کنیم.
+              با تکیه بر بانک خریداران فعال و متقاضیان واقعی، آپارتمان شما را در سریع‌ترین زمان و با بهترین قیمت روز بازار کارشناسی و به فروش می‌رسانیم.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <Link href="/contact?tab=entrust" className="w-full sm:w-auto px-8 py-4 bg-[var(--color-orange)] hover:bg-[var(--color-orange-light)] text-white rounded-xl font-bold transition-colors shadow-lg hover:shadow-[0_4px_20px_rgba(232,97,26,0.4)] whitespace-nowrap text-center">
-                سپردن و ثبت آنلاین ملک
+                سپردن و ثبت آنلاین آپارتمان
               </Link>
               <a href={`tel:${(settings?.site_phone || '02100000000').replace(/\D/g, '')}`} className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-white/20 hover:border-white hover:bg-white/5 text-white rounded-xl font-bold transition-all whitespace-nowrap flex items-center justify-center gap-2">
                 <Phone size={20} />
@@ -383,9 +381,9 @@ export default function HomeClient({ initialListings, investmentListings = [], u
       <section id="guide" className="py-24 bg-[var(--color-bg)]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="mb-12 reveal">
-            <p className="text-[var(--color-orange)] font-bold text-xs uppercase tracking-wider mb-2">محتوای آموزشی</p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[var(--color-dark)] mb-2">راهنمای خرید ملک در گرمدره</h2>
-            <p className="text-[var(--color-gray)]">هر آنچه پیش از معامله باید بدانید</p>
+            <p className="text-[var(--color-orange)] font-bold text-xs uppercase tracking-wider mb-2">تحلیل بازار مسکن</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[var(--color-dark)] mb-2">راهنمای خرید آپارتمان در گرمدره</h2>
+            <p className="text-[var(--color-gray)]">نکات حقوقی سند، قیمت هر متر و معرفی بهترین محله‌ها</p>
           </div>
 
           {initialBlogPosts && initialBlogPosts.length > 0 ? (
@@ -404,7 +402,9 @@ export default function HomeClient({ initialListings, investmentListings = [], u
                     <div className="absolute inset-0 z-10 bg-[linear-gradient(to_top,rgba(10,10,10,0.9)_0%,rgba(10,10,10,0.2)_60%,transparent_100%)]"></div>
                     
                     <div className="relative z-20">
-                      <span className="inline-block bg-[var(--color-orange)]/90 text-white rounded-full px-3 py-1 text-[0.72rem] font-bold mb-[0.8rem]">{post.category}</span>
+                      <span className="inline-block bg-[var(--color-orange)]/90 text-white rounded-full px-3 py-1 text-[0.72rem] font-bold mb-[0.8rem]">
+                        {post.category === 'guide' ? 'راهنمای خرید' : post.category === 'region' ? 'معرفی مناطق' : post.category === 'investment' ? 'سرمایه‌گذاری' : post.category}
+                      </span>
                       <h3 className="text-white text-[1.35rem] font-[800] leading-[1.3] mb-[0.6rem]">{post.title}</h3>
                       <p className="text-[rgba(255,255,255,0.75)] text-[0.85rem] leading-[1.65] line-clamp-2">{post.excerpt}</p>
                       <div className="flex items-center gap-3 text-[rgba(255,255,255,0.55)] text-[0.75rem] mt-[0.8rem]">
@@ -431,7 +431,9 @@ export default function HomeClient({ initialListings, investmentListings = [], u
                       <div className={cn("w-[80px] h-[80px] shrink-0 rounded-[10px] flex items-center justify-center bg-gradient-to-br", post.bgGradient || 'from-gray-100 to-gray-200')}><Newspaper size={28} className="text-[var(--color-gray-mid)]" /></div>
                     )}
                     <div className="flex-1 min-w-0 flex flex-col justify-center">
-                      <span className="inline-block self-start bg-[var(--color-orange)] text-white rounded-full px-2 py-0.5 text-[0.65rem] font-bold mb-1">{post.category}</span>
+                      <span className="inline-block self-start bg-[var(--color-orange)] text-white rounded-full px-2 py-0.5 text-[0.65rem] font-bold mb-1">
+                        {post.category === 'guide' ? 'راهنمای خرید' : post.category === 'region' ? 'معرفی مناطق' : post.category === 'investment' ? 'سرمایه‌گذاری' : post.category}
+                      </span>
                       <h3 className="text-[0.88rem] font-bold text-[var(--color-dark)] leading-[1.4] line-clamp-2">{post.title}</h3>
                       <p className="text-[0.73rem] text-[var(--color-gray-mid)] mt-[0.3rem]">{post.readTime}</p>
                     </div>
